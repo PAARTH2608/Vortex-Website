@@ -5,10 +5,11 @@ height: 100vh;
 background-color: red;
 
 `;
+
 export default function About() {
     return (
         <Container>
-            about
+            
         </Container>
     )
 }

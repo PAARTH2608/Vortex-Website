@@ -12,20 +12,9 @@ import Sponsors from './components/pages/Sponsors';
 import Footer from './components/pages/Footer';
 
 function App() {
-  // const location = useLocation();
   return (
     <Router>
       <Navbar />
-      {/* <Routes location={location} key={location.pathname}>
-        <Route path='/' exact component={Home} />
-        <Route path='/about' component={About} />
-        <Route path='/domain'component={Domains} />
-        <Route path='/speakers' component={Speakers} />
-        <Route path='/timeline' component={Timeline} />
-        <Route path='/prizes' component={Prizes} />
-        <Route path='/faqs' component={FAQ} />
-        <Route path='/sponsors' component={Sponsors} />
-      </Routes> */}
       <Home />
       <About />
       <Domains />
