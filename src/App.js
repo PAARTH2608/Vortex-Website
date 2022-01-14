@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
@@ -12,19 +12,28 @@ import Sponsors from './components/pages/Sponsors';
 import Footer from './components/pages/Footer';
 
 function App() {
+  // const location = useLocation();
   return (
     <Router>
       <Navbar />
-      <Routes>
+      {/* <Routes location={location} key={location.pathname}>
         <Route path='/' exact component={Home} />
-        <Route path='/about' exact component={About} />
-        <Route path='/domain' exact component={Domains} />
-        <Route path='/speakers' exact component={Speakers} />
-        <Route path='/timeline' exact component={Timeline} />
-        <Route path='/prizes' exact component={Prizes} />
-        <Route path='/faqs' exact component={FAQ} />
-        <Route path='/sponsors' exact component={Sponsors} />
-      </Routes>
+        <Route path='/about' component={About} />
+        <Route path='/domain'component={Domains} />
+        <Route path='/speakers' component={Speakers} />
+        <Route path='/timeline' component={Timeline} />
+        <Route path='/prizes' component={Prizes} />
+        <Route path='/faqs' component={FAQ} />
+        <Route path='/sponsors' component={Sponsors} />
+      </Routes> */}
+      <Home />
+      <About />
+      <Domains />
+      <Speakers />
+      <Timeline />
+      <Prizes />
+      <FAQ />
+      <Sponsors />
       <Footer />
     </Router>
   );
