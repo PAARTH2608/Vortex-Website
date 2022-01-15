@@ -1,7 +1,7 @@
 export const speakersList = [
   {
     id: 1,
-    img: "https://i.ibb.co/cXFnLLV/3.png",
+    img: "https://pixabay.com/images/id-2194457/",
     name: "Name-1",
     description: "Founder & CEO, Arcs",
   },

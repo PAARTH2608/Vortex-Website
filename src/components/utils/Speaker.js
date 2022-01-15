@@ -1,10 +1,67 @@
-import React from 'react'
+import React from "react";
+import styled, { keyframes } from "styled-components";
+import Image from '../../assets/yo.jpg'
 
+const Container = styled.div`
+  width: 32%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+`;
+const Img = styled.img`
+  width: 250px;
+  height: 250px;
+`;
+const ContOne = styled.div`
+  height: 60%;
+  width: 35vh;
+  border-radius: 50%;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 200px;
+  height: 200px;
+`;
+const rotate = keyframes`
+0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`;
+const Inner = styled.div`
+height: 100%;
+right: 0px;
+position: absolute;
+border: solid 5px  transparent;
+border-top-color:  #8652D1;
+border-radius: 50%;
+width: 100%;
+transform: rotate(135deg);  
+animation: ${rotate} 1.3s steps(2) .2s infinite;
+-webkit-animation: ${rotate} 1.3s linear infinite;
+`;
+
+const Heading = styled.h1``;
+const Desc = styled.p``;
 export default function Speaker(props) {
-    // console.log(props)
-    return (
-        <div>
-            {props.speaker.name}
-        </div>
-    )
+  return (
+    <Container>
+      <ContOne>
+        <Inner></Inner>
+        <Img src={Image} alt="" />
+      </ContOne>
+      <div class="progress-bar">
+        <div class="circle border"></div>
+      </div>
+      <Heading>{props.speaker.name}</Heading>
+      <Desc>{props.speaker.description}</Desc>
+    </Container>
+  );
 }

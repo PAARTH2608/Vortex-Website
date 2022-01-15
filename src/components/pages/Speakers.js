@@ -19,7 +19,6 @@ const Heading = styled.h1`
   margin-bottom: 10vh;
 `;
 const SpeakersContainer = styled.div`
-  background-color: white;
   height: 60vh;
   width: 80%;
   padding: 0;
