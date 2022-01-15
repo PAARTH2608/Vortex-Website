@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import Image from '../../assets/yo.jpg'
+import Image from "../../assets/yo.jpg";
 
 const Container = styled.div`
   width: 32%;
@@ -28,7 +28,7 @@ const ContOne = styled.div`
   height: 200px;
 `;
 const rotate = keyframes`
-0% {
+0%{
     transform: rotate(0deg);
   }
   100% {
@@ -36,20 +36,28 @@ const rotate = keyframes`
   }
 `;
 const Inner = styled.div`
-height: 100%;
-right: 0px;
-position: absolute;
-border: solid 5px  transparent;
-border-top-color:  #8652D1;
-border-radius: 50%;
-width: 100%;
-transform: rotate(135deg);  
-animation: ${rotate} 1.3s steps(2) .2s infinite;
--webkit-animation: ${rotate} 2.3s linear infinite;
+  height: 100%;
+  right: 0px;
+  position: absolute;
+  border: solid 5px transparent;
+  border-top-color: #8652d1;
+  border-radius: 50%;
+  width: 100%;
+  transform: rotate(135deg);
+  animation: ${rotate} 1.3s steps(2) 0.2s infinite;
+  -webkit-animation: ${rotate} 2.3s linear infinite;
 `;
 
-const Heading = styled.h1``;
-const Desc = styled.p``;
+const Heading = styled.h1`
+  color: white;
+  font-size: 1.8rem;
+  font-family: montserrat;
+`;
+const Desc = styled.p`
+  color: white;
+  font-size: 1.3rem;
+  font-family: montserrat;
+`;
 export default function Speaker(props) {
   return (
     <Container>
@@ -57,9 +65,6 @@ export default function Speaker(props) {
         <Inner></Inner>
         <Img src={Image} alt="" />
       </ContOne>
-      <div class="progress-bar">
-        <div class="circle border"></div>
-      </div>
       <Heading>{props.speaker.name}</Heading>
       <Desc>{props.speaker.description}</Desc>
     </Container>

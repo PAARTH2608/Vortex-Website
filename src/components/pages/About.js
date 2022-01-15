@@ -21,9 +21,10 @@ const Heading = styled.h1`
   font-size: 2rem;
 `;
 const Para = styled.p`
-width: 60%;
+width: 70%;
 color:white;
 font-size: 1.5rem;
+font-family:montserrat;
 `;
 export default function About() {
     return (

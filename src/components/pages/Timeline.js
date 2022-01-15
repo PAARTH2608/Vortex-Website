@@ -10,7 +10,6 @@ flex-direction:column;
 justify-content:center;
 `;
 const Heading = styled.h1`
-background-color:blue;
 height:10vh;
 width:80%;
 padding:0;
@@ -22,7 +21,6 @@ font-size:2.5rem;
 const TimeLineContainer = styled.div`
 height:250vh;
 width: 80%;
-background-color: red;
 margin:10vh auto 0 auto;
 display:flex;
 align-items:center;

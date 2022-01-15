@@ -2,7 +2,7 @@ import styled from "styled-components";
 import SVG from '../../assets/Domain.svg';
 
 const Container = styled.div`
-  height: 300vh;
+  height: 250vh;
   background-color: red;
   display: flex;
   align-items: center;
@@ -29,7 +29,7 @@ const ContainerOne = styled.div`
   justify-content: space-around;
 `;
 const ContainerTwo = styled.div`
-  height: 150vh;
+  height: 100vh;
   width: 100%;
   background-color: grey;
   display: flex;
@@ -41,7 +41,6 @@ const Helper = styled.div`
   height: 30vh;
   width: 60%;
   margin: 2vh auto;
-  background-color: blue;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -142,8 +141,8 @@ export default function Prizes() {
             <Prize top={"60px"}>₹ 7000</Prize>
           </PrizeOne>
           <PrizeTwo>
-            <Header top={"300px"} right={"0"}>SECOND PRIZE</Header>
-            <Prize top={"360px"} right={"0"}>₹ 7000</Prize>
+            <Header top={"170px"} right={"0"}>SECOND PRIZE</Header>
+            <Prize top={"230px"} right={"0"}>₹ 7000</Prize>
           </PrizeTwo>
         </InsideHelper>
       </ContainerOne>

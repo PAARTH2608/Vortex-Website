@@ -93,6 +93,7 @@ const ButtonTwo = styled.button`
 `;
 const Span = styled.span`
   color: #8341e1;
+  height:200px
 `;
 export default function Home() {
   return (

@@ -11,12 +11,13 @@ const Container = styled.div`
   justify-content: center;
 `;
 const Heading = styled.h1`
-  background-color: blue;
   height: 10vh;
-  width: 80%;
+  width: 70%;
   padding: 0;
   margin: 0;
-  margin-bottom: 10vh;
+  margin-bottom: 2vh;
+  color:white;
+  font-size:2.5rem;
 `;
 const SpeakersContainer = styled.div`
   height: 60vh;
@@ -31,7 +32,7 @@ export default function Speakers() {
   // console.log(speakersList)
   return (
     <Container>
-      <Heading>Speakers</Heading>
+      <Heading>SPEAKERS</Heading>
       <SpeakersContainer>
         {speakersList.map((speaker) => (
           <Speaker speaker={speaker} />
