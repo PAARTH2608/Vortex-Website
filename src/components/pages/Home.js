@@ -64,24 +64,32 @@ const ButtonOne = styled.button`
   width: 42%;
   height: 90%;
   margin-right: 0.3rem;
-  font-size:1.5rem;
-  background-color:transparent;
-  border: 4px solid #8341E1;
-  color:white;
-  box-shadow: -2px 3px 8px -1px rgba(0,0,0,0.64);
--webkit-box-shadow: -2px 3px 8px -1px rgba(0,0,0,0.64);
--moz-box-shadow: -2px 3px 8px -1px rgba(0,0,0,0.64);
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: 4px solid #8341e1;
+  color: white;
+  box-shadow: -2px 3px 8px -1px rgba(0, 0, 0, 0.64);
+  -webkit-box-shadow: -2px 3px 8px -1px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: -2px 3px 8px -1px rgba(0, 0, 0, 0.64);
+
+  &:hover{
+    background-color: #8341e1;
+  }
 `;
 const ButtonTwo = styled.button`
   width: 42%;
   height: 90%;
-  font-size:1.5rem;
-  background-color:#8341E1;
-  border: 4px solid #8341E1;
-  color:white;
-  box-shadow: -2px 3px 8px -1px rgba(0,0,0,0.64);
--webkit-box-shadow: -2px 3px 8px -1px rgba(0,0,0,0.64);
--moz-box-shadow: -2px 3px 8px -1px rgba(0,0,0,0.64);
+  font-size: 1.5rem;
+  background-color: #8341e1;
+  border: 4px solid #8341e1;
+  color: white;
+  box-shadow: -2px 3px 8px -1px rgba(0, 0, 0, 0.64);
+  -webkit-box-shadow: -2px 3px 8px -1px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: -2px 3px 8px -1px rgba(0, 0, 0, 0.64);
+
+  &:hover{
+    background-color: transparent;
+  }
 `;
 const Span = styled.span`
   color: #8341e1;
@@ -108,10 +116,10 @@ export default function Home() {
           </BoxThree>
         </ContTwo>
         <ContThree>
-          <FaInstagram size={35} color="white" />
-          <FaFacebook size={35} color="white" />
-          <FaEnvelope size={35} color="white" />
-          <FaLinkedin size={35} color="white" />
+          <FaInstagram size={35} color="white" style={{"cursor":"pointer"}} />
+          <FaFacebook size={35} color="white" style={{"cursor":"pointer"}}/>
+          <FaEnvelope size={35} color="white" style={{"cursor":"pointer"}}/>
+          <FaLinkedin size={35} color="white" style={{"cursor":"pointer"}}/>
         </ContThree>
       </Helper>
     </Container>
