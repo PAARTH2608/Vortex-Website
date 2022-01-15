@@ -45,7 +45,7 @@ border-radius: 50%;
 width: 100%;
 transform: rotate(135deg);  
 animation: ${rotate} 1.3s steps(2) .2s infinite;
--webkit-animation: ${rotate} 1.3s linear infinite;
+-webkit-animation: ${rotate} 2.3s linear infinite;
 `;
 
 const Heading = styled.h1``;
