@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { speakersList } from "../speakerData";
-import Speaker from "../Speaker";
+import { speakersList } from "../data/speakerData";
+import Speaker from "../utils/Speaker";
 
 const Container = styled.div`
   height: 100vh;

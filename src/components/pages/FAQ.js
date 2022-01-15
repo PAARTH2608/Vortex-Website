@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { faqData } from '../faqData'
-import Question from "../Question";
+import { faqData } from '../data/faqData';
+import Question from "../utils/Question";
 
 const Container = styled.div`
   height: 100vh;
