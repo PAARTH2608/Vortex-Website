@@ -11,11 +11,13 @@ const Container = styled.div`
   justify-content: space-around;
 `;
 const Heading = styled.h1`
-  background-color: blue;
   height: 7vh;
   width: 80%;
   padding: 0;
   margin: 0 auto;
+  text-align:right;
+  color:white;
+  font-size:2.5rem;
 `;
 const Helper = styled.div`
 height:55vh;
@@ -29,7 +31,7 @@ export default function FAQ() {
     // console.log(faqData)
     return (
         <Container>
-            <Heading>FAQ's</Heading>
+            <Heading>FAQ'S</Heading>
             <Helper>
                 {faqData.map(ques => (
                     <Question question={ques} />

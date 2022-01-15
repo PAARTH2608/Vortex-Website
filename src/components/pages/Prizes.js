@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import SVG from '../../assets/Domain.svg';
 
 const Container = styled.div`
-  height: 200vh;
+  height: 300vh;
   background-color: red;
   display: flex;
   align-items: center;
@@ -16,10 +17,10 @@ const Heading = styled.h1`
   text-align: center;
   color: white;
   font-family: montserrat;
-  font-size: 2rem;
+  font-size: 2.5rem;
 `;
 const ContainerOne = styled.div`
-  height: 100vh;
+  height: 150vh;
   width: 100%;
   background-color: red;
   display: flex;
@@ -28,7 +29,7 @@ const ContainerOne = styled.div`
   justify-content: space-around;
 `;
 const ContainerTwo = styled.div`
-  height: 100vh;
+  height: 150vh;
   width: 100%;
   background-color: grey;
   display: flex;
@@ -38,7 +39,7 @@ const ContainerTwo = styled.div`
 `;
 const Helper = styled.div`
   height: 30vh;
-  width: 80%;
+  width: 60%;
   margin: 2vh auto;
   background-color: blue;
   display: flex;
@@ -117,6 +118,10 @@ const DivThree = styled.div`
   font-family: montserrat;
   margin-bottom: 2vh;
 `;
+const Image = styled.img`
+width:100%;
+height:30vh
+`;
 export default function Prizes() {
   return (
     <Container>
@@ -143,8 +148,13 @@ export default function Prizes() {
         </InsideHelper>
       </ContainerOne>
       <ContainerTwo>
-        <Helper></Helper>
-        <Helper></Helper>
+        <Helper>
+          <Image src={SVG} alt="domain-name" />
+        </Helper>
+        <Helper>
+          <Image src={SVG} alt="domain-name" />
+          <Image src={SVG} alt="domain-name" />
+        </Helper>
       </ContainerTwo>
     </Container>
   );
