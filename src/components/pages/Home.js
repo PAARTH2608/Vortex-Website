@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import img1 from '../../assets/logo.svg';
 import { FaInstagram, FaFacebook, FaLinkedin, FaEnvelope,  } from 'react-icons/fa'
+import Counter from "../utils/Counter";
+import '../component-styles/Home.css';
 
 const Container = styled.div`
   height: 90vh;
@@ -38,7 +40,9 @@ height: 35vh;
 `;
 const BoxOne = styled.h1`
 height:10vh;
-width:100%
+width:100%;
+color: #BA8AFF;
+font-family: montserrat;
 `;
 const BoxTwo = styled.h1`
 height:20vh;
@@ -65,7 +69,7 @@ export default function Home() {
       <Helper>
         <ContTwo >
           <BoxOne>Oct 29, 2021 09: 00 pm IST</BoxOne>
-          <BoxTwo>27 : 08 : 19 : 17</BoxTwo>
+          <BoxTwo><Counter countdownTimestampMs={1645983662000}/></BoxTwo>
           <BoxThree>
             <ButtonOne />
             <ButtonTwo />

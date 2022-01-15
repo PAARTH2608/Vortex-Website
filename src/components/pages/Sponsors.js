@@ -22,9 +22,6 @@ const ContainerOne = styled.div`
   background-color: pink;
   display:flex;
   flex:wrap;
-//   align-items:center;
-//   justify-content:space-around;
-
 `;
 const Sponsor = styled.div`
 height:20%;
