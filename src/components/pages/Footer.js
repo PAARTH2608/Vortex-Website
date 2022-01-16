@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FaInstagramSquare, FaFacebook, FaTwitterSquare, FaLinkedin } from 'react-icons/fa' 
+import Union from '../../assets/PageSVGs/Footer/Union.svg';
 
 const Container = styled.div`
 height: 55vh;
@@ -8,6 +9,7 @@ display: flex;
 align-items: center;
 flex-direction: column;
 justify-content: space-around;
+position:relative;
 `;
 const ContainerOne = styled.div`
 height:25vh;
@@ -57,10 +59,20 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 `;
+const Img = styled.img`
+  position: absolute;
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
+  height: ${(props) => props.height};
+  right: ${(props) => props.right};
+  bottom: ${props => props.bottom};
+  z-index: 1;
+`;
 
 export default function Footer() {
     return (
         <Container>
+            <Img src={Union} alt="rect1" bottom={"0%"} right={"0%"} height={"38vh"} />
             <ContainerOne>
                 <InsideContainer>
                     <InOne>STAY TUNED</InOne>
