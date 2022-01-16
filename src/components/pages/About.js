@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Circle from '../../assets/PageSVGs/About/Circle.svg';
 import Rect1 from '../../assets/PageSVGs/About/Rect1.svg';
 import Rect2 from '../../assets/PageSVGs/About/Rect2.svg';
-import Ellipse from '../../assets/PageSVGs/About/Ellipse.svg';
+import Ellipse from '../../assets/PageSVGs/About/Ellips.svg';
 
 const Container = styled.div`
 height: 100vh;
