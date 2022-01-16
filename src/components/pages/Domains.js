@@ -48,6 +48,8 @@ const Image = styled.img`
   left: ${(props) => props.left};
   height: ${(props) => props.height};
   right: ${(props) => props.right};
+
+  @media only screen and (max-width: 600px){}
 `;
 export default function Domains() {
   return (

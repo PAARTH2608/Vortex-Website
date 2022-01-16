@@ -32,13 +32,15 @@ const HelperOne = styled.div`
   justify-content: space-between;
   margin-bottom: 1vh;
 `;
-const HelperTwo = styled.div``;
+const HelperTwo = styled.div`
+  margin-bottom: 1vh;
+`;
 export default function Question(props) {
   const [open, setOpen] = useState(false);
 
   const handler = () => {
-      setOpen(state => !state);
-  }
+    setOpen((state) => !state);
+  };
 
   return (
     <Container>

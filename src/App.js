@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/utils/Navbar';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
@@ -17,13 +17,13 @@ function App() {
       <Navbar />
       <Home />
       <About />
-      <Domains />
+      {/* <Domains /> */}
       <Speakers />
       <Timeline />
-      <Prizes />
+      {/* <Prizes />
       <FAQ />
       <Sponsors />
-      <Footer />
+      <Footer /> */}
     </Router>
   );
 }
