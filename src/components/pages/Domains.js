@@ -12,7 +12,7 @@ import CAD from "../../assets/PageSVGs/Domain/CAD.svg";
 // BUG - CAD Missing
 const Container = styled.div`
   height: 100vh;
-  background-color: green;
+  background-color: pink;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -54,7 +54,7 @@ export default function Domains() {
     <Container>
       <Image src={Rect1} alt="rect1" top={"10%"} left={"40%"} height={"3vh"} />
       <Image src={Rect2} alt="rect2" top={"75%"} height={"6vh"} right={"0%"}/>
-      <Image src={CAD} alt="cad" top={"0%"} left={"10%"} height={"25vh"} />
+      <Image src={CAD} alt="cad" top={"90%"} right={"0%"} height={"15vh"} />
       <Heading>DOMAINS</Heading>
       <MoleculeContainer>
         <Img

@@ -10,7 +10,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   position:relative;
 `;
 const Heading = styled.h1`
@@ -22,13 +22,17 @@ const Heading = styled.h1`
   color:white;
   font-size:2.5rem;
   z-index: 2;
+  margin-bottom:5vh;
 `;
 const Helper = styled.div`
-height:55vh;
-width:80%;
+height:65vh;
+width:70%;
 margin:0 auto;
 background-color:green;
-
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:flex-start;
 `;
 const Img = styled.img`
   position: absolute;
@@ -42,7 +46,7 @@ export default function FAQ() {
     // console.log(faqData)
     return (
         <Container>
-            <Img src={Rect1} alt="rect1" top={"12%"} right={"12%"} height={"6vh"} />
+            <Img src={Rect1} alt="rect1" top={"3%"} right={"12%"} height={"6vh"} />
             <Img src={Rect2} alt="rect2" top={"82%"} left={"12%"} height={"5vh"} />
             <Heading>FAQ'S</Heading>
             <Helper>
