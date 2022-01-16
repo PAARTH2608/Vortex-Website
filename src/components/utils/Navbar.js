@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../component-styles/Navbar.css';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
+import Logo from '../../assets/RoboVITics-Logo.svg';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -16,7 +17,7 @@ function Navbar() {
         <nav className='navbar'>
           <div className='navbar-container container'>
             <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-              roboVITics
+              <img src={Logo} alt="logo" />
             </Link>
             <div className='menu-icon' onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
