@@ -9,13 +9,20 @@ import {
 } from "react-icons/fa";
 import Counter from "../utils/Counter";
 import "../component-styles/Home.css";
+import Rect1 from '../../assets/PageSVGs/Home/Rect1.svg';
+import Rect2 from '../../assets/PageSVGs/Home/Rect2.svg';
+import Rect3 from '../../assets/PageSVGs/Home/Rect3.svg';
+import Rect4 from '../../assets/PageSVGs/Home/Rect4.svg';
+import Rect5 from '../../assets/PageSVGs/Home/Rect5.svg';
+
 
 const Container = styled.div`
-  height: 90vh;
+  height: 100vh;
   background-color: #553d76;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position:relative;
 `;
 const ContOne = styled.div`
   width: 20%;
@@ -95,9 +102,21 @@ const Span = styled.span`
   color: #8341e1;
   height:200px
 `;
+const Image = styled.img`
+position:absolute;
+top:${props => props.top};
+left:${props => props.left};
+height:${props => props.height};
+right:${props => props.right};
+`;
 export default function Home() {
   return (
     <Container>
+      <Image src={Rect1} alt="rect1" top={"8%"} left={"0%"} height={"5vh"}/>
+      <Image src={Rect2} alt="rect2" top={"15%"} left={"40%"} height={"6vh"}/>
+      <Image src={Rect3} alt="rect3" top={"55%"} right={"0%"} height={"6vh"}/>
+      <Image src={Rect4} alt="rect4" top={"75%"} left={"10%"} height={"3vh"}/>
+      <Image src={Rect5} alt="rect5" top={"90%"} right={"0%"} height={"3vh"}/>
       <ContOne>
         <Img src={img1} alt="logo-vortex" />
       </ContOne>

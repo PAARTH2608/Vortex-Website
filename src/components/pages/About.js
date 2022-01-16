@@ -41,7 +41,7 @@ right:${props => props.right};
 export default function About() {
     return (
         <Container>
-            <Image src={Circle} alt="circle" top={"-110px"} left={"0%"} height={"35vh"}/>
+            <Image src={Circle} alt="circle" top={"-8%"} left={"0%"} height={"35vh"}/>
             <Image src={Rect1} alt="rect1" top={"25%"} left={"70%"} height={"3vh"}/>
             <Image src={Rect2} alt="rect1" top={"85%"} left={"10%"} height={"5vh"}/>
             <Image src={Ellipse} alt="elps1" top={"30%"} height={"35vh"} right={"0px"}/>
