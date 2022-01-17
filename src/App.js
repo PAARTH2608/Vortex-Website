@@ -22,8 +22,8 @@ function App() {
       {/* <Timeline /> */}
       {/* <Prizes /> */}
       <FAQ />
-      {/* <Sponsors /> */}
-      {/* <Footer /> */}
+      <Sponsors />
+      <Footer />
     </Router>
   );
 }

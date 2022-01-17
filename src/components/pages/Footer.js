@@ -22,6 +22,9 @@ justify-content:space-around;
     flex-direction:column;
     height: 30vh;
 }
+@media only screen and (max-width: 500px){
+    width:90%
+}
 `;
 const InsideContainer = styled.div`
 display:flex;
@@ -94,6 +97,10 @@ margin-bottom:2vh;
 }
 @media only screen and (max-width: 768px){
     font-size:1.5rem;
+}
+@media only screen and (max-width: 500px){
+    width:100%;
+    text-align:center;
 }
 `;
 const InFour = styled.p`

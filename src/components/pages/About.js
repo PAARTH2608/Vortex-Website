@@ -63,6 +63,9 @@ const Image = styled.img`
   @media only screen and (max-width: 930px){
       display: ${props => props.dis}
   }
+  @media only screen and (max-width: 600px){
+    height: ${props => props.xs}
+}
 `;
 export default function About() {
   return (
@@ -73,6 +76,7 @@ export default function About() {
         top={"-8%"}
         left={"0%"}
         height={"35vh"}
+        xs={"25vh"}
       />
       <Image src={Rect1} alt="rect1" top={"25%"} left={"70%"} height={"3vh"} />
       <Image src={Rect2} alt="rect1" top={"85%"} left={"10%"} height={"5vh"} />
