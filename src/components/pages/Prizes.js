@@ -6,7 +6,7 @@ import Rect2 from "../../assets/PageSVGs/Prizes/Rect2.svg";
 
 const Container = styled.div`
   height: 300vh;
-  background-color: red;
+  background-color: #2a044f;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -25,7 +25,6 @@ const Heading = styled.h1`
 const ContainerOne = styled.div`
   height: 180vh;
   width: 100%;
-  background-color: red;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +34,6 @@ const ContainerOne = styled.div`
 const ContainerTwo = styled.div`
   height: 120vh;
   width: 100%;
-  background-color: grey;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,10 +49,11 @@ const Helper = styled.div`
   justify-content: space-between;
 `;
 const InsideHelper = styled.div`
-  height: 30vh;
+  height: 20vh;
   width: 80%;
   display: flex;
   margin: 0 auto;
+  z-index:2;
 `;
 const Strip = styled.div`
   height: 60vh;
@@ -62,8 +61,8 @@ const Strip = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 `;
 const StripOne = styled.div`
   height: 2rem;
@@ -95,6 +94,11 @@ const Header = styled.h1`
   position: absolute;
   top: ${(props) => props.top};
   right: ${(props) => props.right};
+
+  @media only screen and (max-width: 1100px){
+    font-size:2rem;
+    top: ${props => props.xtop};
+  }
 `;
 const Prize = styled.h2`
   font-size: 3rem;
@@ -104,6 +108,11 @@ const Prize = styled.h2`
   right: ${(props) => props.right};
   font-weight: 900;
   font-family: montserrat;
+
+  @media only screen and (max-width: 1100px){
+    font-size:2rem;
+    top: ${props => props.xtop};
+  }
 `;
 const DivOne = styled.div`
   color: white;
@@ -133,6 +142,13 @@ const Img = styled.img`
   height: ${(props) => props.height};
   right: ${(props) => props.right};
   z-index: 1;
+
+  @media only screen and (max-width: 1100px){
+    height: ${props => props.xs}
+  }
+  @media only screen and (max-width: 940px){
+    height: ${props => props.xxs}
+  }
 `;
 export default function Prizes() {
   return (
@@ -144,6 +160,8 @@ export default function Prizes() {
           top={"60%"}
           left={"0%"}
           height={"80vh"}
+          xs={"40vh"}
+          xxs={"30vh"}
         />
         <Img src={Rect1} alt="rect1" top={"110%"} right={"0%"} height={"8vh"} />
         <Heading>PRIZES</Heading>
@@ -158,14 +176,14 @@ export default function Prizes() {
         </Strip>
         <InsideHelper>
           <PrizeOne>
-            <Header top={"0"}>FIRST PRIZE</Header>
-            <Prize top={"60px"}>₹ 7000</Prize>
+            <Header top={"0"} xtop={"-120px"}>FIRST PRIZE</Header>
+            <Prize top={"60px"} xtop={"-40px"}>₹ 7000</Prize>
           </PrizeOne>
           <PrizeTwo>
-            <Header top={"170px"} right={"0"}>
+            <Header top={"170px"} right={"0"} xtop={"70px"}>
               SECOND PRIZE
             </Header>
-            <Prize top={"230px"} right={"0"}>
+            <Prize top={"230px"} right={"0"} xtop={"130px"}>
               ₹ 7000
             </Prize>
           </PrizeTwo>

@@ -13,7 +13,7 @@ import Tech from "../../assets/PageSVGs/Timeline/TECH.svg";
 const Container = styled.div`
   height: 300vh;
   width: 100%;
-  background-color: pink;
+  background-color: #2a044f;
   display: flex;
   align-items: center;
   flex-direction: column;

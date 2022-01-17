@@ -6,7 +6,7 @@ import Ellipse from "../../assets/PageSVGs/About/Ellips.svg";
 
 const Container = styled.div`
   height: 100vh;
-  background-color: red;
+  background-color: #2a044f;
   display: flex;
   flex-direction: column;
   align-items: center;

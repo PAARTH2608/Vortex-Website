@@ -4,6 +4,21 @@ import '../component-styles/Navbar.css';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import Logo from '../../assets/RoboVITics-Logo.svg';
+import styled from "styled-components";
+import Circle from '../../assets/PageSVGs/Header/Circle.svg';
+
+const Image = styled.img`
+  position: absolute;
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
+  height: ${(props) => props.height};
+  right: ${(props) => props.right};
+  z-index:999;
+
+  @media only screen and (max-width: 610px) {
+    height:${props => props.sm};
+  }
+`;
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -15,6 +30,7 @@ function Navbar() {
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
         <nav className='navbar'>
+        <Image src={Circle} alt="circle" top={"0%"} right={"0%"} height={"19vh"} sm={"3vh"} />
           <div className='navbar-container container'>
             <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
               <img src={Logo} alt="logo" />

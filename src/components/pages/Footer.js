@@ -78,7 +78,9 @@ const InOne = styled.p`
 font-size: 3rem;
 color:white;
 font-family: montserrat;
-
+@media only screen and (max-width: 1050px){
+    font-size: 2rem;
+}
 @media only screen and (max-width: 920px){
     font-size: 4rem;
 }
@@ -91,7 +93,9 @@ font-size: 1.8rem;
 color:white;
 font-family: montserrat;
 margin-bottom:2vh;
-
+@media only screen and (max-width: 1050px){
+    font-size: 1.4rem;
+}
 @media only screen and (max-width: 920px){
     font-size:2.4rem;
 }

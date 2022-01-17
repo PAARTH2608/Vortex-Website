@@ -10,9 +10,9 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-around;
 
-  @media only screen and (max-width:940px){
+  @media only screen and (max-width: 940px) {
     height: 40%;
-    margin-bottom:4vh;
+    margin-bottom: 4vh;
   }
 `;
 const Img = styled.img`
@@ -31,9 +31,12 @@ const ContOne = styled.div`
   position: relative;
   width: 200px;
   height: 200px;
-  
+
   @media only screen and (max-width: 940px) {
-    width: 82.5%;
+    width: 76.5%;
+  }
+  @media only screen and (max-width: 800px) {
+    width: 68.5%;
   }
 `;
 const rotate = keyframes`
@@ -50,13 +53,12 @@ const Inner = styled.div`
   position: absolute;
   border: solid 5px transparent;
   border-top-color: #8652d1;
-  border-radius:50%;
+  border-radius: 50%;
   width: 100%;
   transform: rotate(135deg);
   animation: ${rotate} 1.3s steps(2) 0.2s infinite;
   -webkit-animation: ${rotate} 2.3s linear infinite;
-  @media only screen and (max-width:940px){
-    
+  @media only screen and (max-width: 940px) {
   }
 `;
 
@@ -65,18 +67,18 @@ const Heading = styled.h1`
   font-size: 1.8rem;
   font-family: montserrat;
 
-  @media only screen and (max-width: 700px){
-    width:100%;
+  @media only screen and (max-width: 700px) {
+    width: 100%;
     font-size: 1.5rem;
-    text-align:center;
+    text-align: center;
   }
 `;
 const Desc = styled.p`
   color: white;
   font-size: 1.3rem;
   font-family: montserrat;
-  @media only screen and (max-width: 700px){
-    width:150%;
+  @media only screen and (max-width: 700px) {
+    width: 150%;
     font-size: 1.1rem;
   }
 `;

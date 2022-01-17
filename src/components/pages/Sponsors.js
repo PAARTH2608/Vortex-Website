@@ -11,7 +11,7 @@ import Flogo from '../../assets/Sponsors/flogo.svg';
 
 const Container = styled.div`
   height: 100vh;
-  background-color: grey;
+  background-color: #2a044f;
   display: flex;
   align-items: center;
   flex-direction: column;

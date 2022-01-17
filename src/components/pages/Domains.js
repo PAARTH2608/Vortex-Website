@@ -12,7 +12,7 @@ import CAD from "../../assets/PageSVGs/Domain/CAD.svg";
 // BUG - CAD Missing
 const Container = styled.div`
   height: 100vh;
-  background-color: pink;
+  background-color: #2a044f;
   display: flex;
   align-items: center;
   flex-direction: column;
