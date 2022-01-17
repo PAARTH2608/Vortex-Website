@@ -50,7 +50,7 @@ export default function FAQ() {
       <Heading>FAQ'S</Heading>
       <Helper>
         {faqData.map((ques) => (
-          <Question question={ques} />
+          <Question question={ques} key={ques.id}/>
         ))}
       </Helper>
     </Container>

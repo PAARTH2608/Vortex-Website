@@ -69,7 +69,7 @@ const Image = styled.img`
 `;
 export default function About() {
   return (
-    <Container>
+    <Container >
       <Image
         src={Circle}
         alt="circle"

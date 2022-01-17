@@ -53,7 +53,7 @@ export default function Speakers() {
       <Heading>SPEAKERS</Heading>
       <SpeakersContainer>
         {speakersList.map((speaker) => (
-          <Speaker speaker={speaker} />
+          <Speaker speaker={speaker} key={speaker.id}/>
         ))}
       </SpeakersContainer>
     </Container>
