@@ -17,6 +17,11 @@ width:70%;
 display:flex;
 align-items:center;
 justify-content:space-around;
+
+@media only screen and (max-width: 920px){
+    flex-direction:column;
+    height: 30vh;
+}
 `;
 const InsideContainer = styled.div`
 display:flex;
@@ -24,6 +29,10 @@ flex-direction:column;
 align-items:center;
 justify-content:space-around;
 width:35%;
+
+@media only screen and (max-width: 920px){
+    width:100%;
+}
 `;
 const Heading = styled.div`
 height:8vh;
@@ -35,23 +44,57 @@ text-align:center;
 color:white;
 font-size:1.2rem;
 font-family: montserrat;
+
+@media only screen and (max-width: 920px){
+    font-size: 2rem;
+    width:90%;
+}
+@media only screen and (max-width: 768px){
+    font-size: 1rem;
+}
 `;
 const Span = styled.span`
 border-left: 1.5px solid white;
 height: 150px;
 position:absolute;
 left: 50%;
+
+@media only screen and (max-width: 920px){
+    border-left:0;
+    border-bottom: 1.5px solid white;
+    width:350px;
+    height:0;
+    left:27%;
+}
+@media only screen and (max-width: 768px){
+    left:18%;
+    width:250px;
+}
 `;
 const InOne = styled.p`
 font-size: 3rem;
 color:white;
 font-family: montserrat;
+
+@media only screen and (max-width: 920px){
+    font-size: 4rem;
+}
+@media only screen and (max-width: 768px){
+    font-size: 2rem;
+}
 `;
 const InTwo = styled.p`
 font-size: 1.8rem;
 color:white;
 font-family: montserrat;
 margin-bottom:2vh;
+
+@media only screen and (max-width: 920px){
+    font-size:2.4rem;
+}
+@media only screen and (max-width: 768px){
+    font-size:1.5rem;
+}
 `;
 const InFour = styled.p`
 width:100%;

@@ -18,12 +18,12 @@ function App() {
       <Home />
       <About />
       {/* <Domains /> */}
-      <Speakers />
-      <Timeline />
-      {/* <Prizes />
-      <FAQ />
-      <Sponsors />
-      <Footer /> */}
+      {/* <Speakers /> */}
+      {/* <Timeline /> */}
+      {/* <Prizes /> */}
+      {/* <FAQ />
+      <Sponsors /> */}
+      <Footer />
     </Router>
   );
 }
