@@ -21,9 +21,9 @@ function App() {
       {/* <Speakers /> */}
       {/* <Timeline /> */}
       {/* <Prizes /> */}
-      {/* <FAQ />
-      <Sponsors /> */}
-      <Footer />
+      <FAQ />
+      {/* <Sponsors /> */}
+      {/* <Footer /> */}
     </Router>
   );
 }

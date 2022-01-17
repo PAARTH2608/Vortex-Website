@@ -10,6 +10,22 @@ const Container = styled.div`
   padding: 1vh;
   overflow: hidden;
   margin: 1vh;
+  overflow: scroll;
+
+  ::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    // box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    // background: rgb(90, 226, 226);
+    border-radius: 10px;
+  }
 `;
 const Que = styled.p`
   color: white;
@@ -18,22 +34,33 @@ const Que = styled.p`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media only screen and (max-width: 670px){
+    font-size: 0.7rem
+  }
 `;
 const Arrow = styled.img`
   cursor: pointer;
+  @media only screen and (max-width: 670px){
+    height: 0.6rem
+  }
 `;
 const Answer = styled.p`
   color: white;
   font-family: montserrat;
+
+  @media only screen and (max-width: 670px){
+    font-size: 0.6rem
+  }
 `;
 const HelperOne = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1vh;
+  margin-top: 1vh;
 `;
 const HelperTwo = styled.div`
-  margin-bottom: 1vh;
+  margin: 1vh 0 1vh 0;
 `;
 export default function Question(props) {
   const [open, setOpen] = useState(false);
