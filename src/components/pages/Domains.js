@@ -1,3 +1,4 @@
+import { useState, useLayoutEffect } from "react";
 import styled from "styled-components";
 import Defence from "../../assets/Molecules/defence.svg";
 import HealthCare from "../../assets/Molecules/healthcare.svg";
@@ -9,7 +10,6 @@ import Rect1 from "../../assets/PageSVGs/Domain/Rect1.svg";
 import Rect2 from "../../assets/PageSVGs/Domain/Rect2.svg";
 import CAD from "../../assets/PageSVGs/Domain/CAD.svg";
 
-// BUG - CAD Missing
 const Container = styled.div`
   height: 100vh;
   background-color: #2a044f;
@@ -47,20 +47,25 @@ const Img = styled.img`
 
   @keyframes animate {
     0% {
-        transform: translateY(100px);
+      transform: translateY(70px);
     }
 
     50% {
-        transform: translateY(10px);
-        width: -140px;
-        height: +140px;
-
+      transform: translateY(10px);
+      width: -160px;
+      height: +160px;
     }
 
     100% {
-        transform: translateY(100px);
+      transform: translateY(70px);
     }
-}
+  }
+  @media only screen and (max-width: 1300px){
+    height: ${props => props.med};
+  }
+  @media only screen and (max-width: 1100px){
+    height: ${props => props.xmed};
+  }
 `;
 const Image = styled.img`
   position: absolute;
@@ -68,23 +73,38 @@ const Image = styled.img`
   left: ${(props) => props.left};
   height: ${(props) => props.height};
   right: ${(props) => props.right};
-
-  @media only screen and (max-width: 600px){}
 `;
 export default function Domains() {
+  const [isMobile, setIsMobile] = useState(false);
+  useLayoutEffect(() => {
+    function updateSize() {
+      if (window.innerWidth < 1100) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+
+
   return (
     <Container>
       <Image src={Rect1} alt="rect1" top={"10%"} left={"40%"} height={"3vh"} />
-      <Image src={Rect2} alt="rect2" top={"75%"} height={"6vh"} right={"0%"}/>
+      <Image src={Rect2} alt="rect2" top={"75%"} height={"6vh"} right={"0%"} />
       <Image src={CAD} alt="cad" top={"90%"} right={"0%"} height={"15vh"} />
       <Heading>DOMAINS</Heading>
-      <MoleculeContainer>
+      {<MoleculeContainer>
         <Img
           src={Defence}
           alt="def"
           size={"150px"}
           top={"50px"}
           left={"40px"}
+          sTop={"50px"}
+          sLeft={"40px"}
         />
         <Img
           src={HealthCare}
@@ -92,6 +112,8 @@ export default function Domains() {
           size={"200px"}
           top={"170px"}
           left={"240px"}
+          sTop={"50px"}
+          sLeft={"40px"}
         />
         <Img
           src={Space}
@@ -99,6 +121,8 @@ export default function Domains() {
           size={"100px"}
           top={"20px"}
           left={"430px"}
+          sTop={"50px"}
+          sLeft={"40px"}
         />
         <Img
           src={CommunityHelp}
@@ -106,6 +130,8 @@ export default function Domains() {
           size={"170px"}
           top={"30px"}
           left={"640px"}
+          sTop={"50px"}
+          sLeft={"40px"}
         />
         <Img
           src={Agriculture}
@@ -113,6 +139,8 @@ export default function Domains() {
           size={"130px"}
           top={"180px"}
           left={"890px"}
+          sTop={"50px"}
+          sLeft={"40px"}
         />
         <Img
           src={OpenInnovation}
@@ -120,8 +148,11 @@ export default function Domains() {
           size={"200px"}
           top={"5px"}
           left={"1040px"}
+          sTop={"50px"}
+          sLeft={"40px"}
+          med={"150px"}
         />
-      </MoleculeContainer>
+      </MoleculeContainer>}
     </Container>
   );
 }
