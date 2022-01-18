@@ -1,7 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../component-styles/Navbar.css";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import Logo from "../../assets/RoboVITics-Logo.svg";
 import styled from "styled-components";

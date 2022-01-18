@@ -19,6 +19,13 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   position: relative;
+
+  @media only screen and (max-width: 850px){
+    height:200vh;
+  }
+  @media only screen and (max-width: 500px){
+    height:150vh;
+  }
 `;
 const Heading = styled.h1`
   height: 10vh;
@@ -33,6 +40,15 @@ const Heading = styled.h1`
   @media only screen and (max-width: 1024px) {
     text-align: center;
   }
+  @media only screen and (max-width: 940px){
+    text-align:center;
+    font-size:3.3rem;
+    margin:5vh 0;
+  }
+  @media only screen and (max-width: 830px){
+    margin:7vh 0 10vh 0;
+    font-size:2.3rem;
+  }
 `;
 const TimeLineContainer = styled.div`
   height: 250vh;
@@ -44,11 +60,20 @@ const TimeLineContainer = styled.div`
 
   @media only screen and (max-width: 1024px) {
     justify-content:flex-start;
+    align-items: flex-start;
+  }
+  @media only screen and (max-width: 920px) {
+    margin:0 auto;
   }
 `;
 const Image = styled.img`
   height: 2000px;
-  @media only screen and (max-width: 1024px){}
+  @media only screen and (max-width: 800px) {
+    height:1500px;
+  }
+  @media only screen and (max-width: 650px) {
+    height:800px;
+  }
 `;
 const Img = styled.img`
   position: absolute;
