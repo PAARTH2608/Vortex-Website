@@ -41,6 +41,26 @@ const Img = styled.img`
   position: absolute;
   top: ${(props) => props.top};
   left: ${(props) => props.left};
+  position: absolute;
+  display: block;
+  animation: animate 3s ease-in-out infinite;
+
+  @keyframes animate {
+    0% {
+        transform: translateY(100px);
+    }
+
+    50% {
+        transform: translateY(10px);
+        width: -140px;
+        height: +140px;
+
+    }
+
+    100% {
+        transform: translateY(100px);
+    }
+}
 `;
 const Image = styled.img`
   position: absolute;

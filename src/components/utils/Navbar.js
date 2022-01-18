@@ -28,13 +28,12 @@ function Navbar() {
   // const myRef = useRef(null)
 
   const closeMobileMenu = () => {
-    // myRef.current.scrollIntoView()
     setClick(false);
-    // helper()
+    
   };
-  // const helperOne = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  
   const helperTwo = () => window.scrollTo({ top: 700, behavior: "smooth" });
-  const helperThree = () => window.scrollTo({ top: 1400, behavior: "smooth" });
+  const helperThree = () => window.scrollTo({ top: 1500, behavior: "smooth" });
   const helperFour = () => window.scrollTo({ top: 2200, behavior: "smooth" });
   const helperFive = () => window.scrollTo({ top: 2900, behavior: "smooth" });
   const helperSix = () => window.scrollTo({ top: 5100, behavior: "smooth" });

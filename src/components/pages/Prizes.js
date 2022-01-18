@@ -11,6 +11,10 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
+
+  @media only screen and (max-width: 940px){
+    height:200vh
+  }
 `;
 const Heading = styled.h1`
   height: 7vh;
@@ -23,7 +27,7 @@ const Heading = styled.h1`
   font-size: 2.5rem;
 `;
 const ContainerOne = styled.div`
-  height: 180vh;
+  height: 120vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -32,13 +36,19 @@ const ContainerOne = styled.div`
   position: relative;
 `;
 const ContainerTwo = styled.div`
-  height: 120vh;
+  height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
+
+  @media only screen and (max-width: 1050px){
+    
+    justify-content: flex-start;
+  }
+
 `;
 const Helper = styled.div`
   height: 30vh;
@@ -47,6 +57,14 @@ const Helper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index:1500;
+
+  @media only screen and (max-width: 1050px){
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: ${props => props.pt};
+  }
 `;
 const InsideHelper = styled.div`
   height: 20vh;
@@ -134,6 +152,14 @@ const DivThree = styled.div`
 const Image = styled.img`
   width: 100%;
   height: 30vh;
+
+  @media only screen and (max-width: 1050px){
+    height:20vh;
+  }
+  @media only screen and (max-width: 1050px){
+    height:20vh;
+    margin-bottom:2vh;
+  }
 `;
 const Img = styled.img`
   position: absolute;
@@ -183,7 +209,7 @@ export default function Prizes() {
             <Header top={"170px"} right={"0"} xtop={"70px"}>
               SECOND PRIZE
             </Header>
-            <Prize top={"230px"} right={"0"} xtop={"130px"}>
+            <Prize top={"230px"} right={"0"} xtop={"150px"}>
               ₹ 7000
             </Prize>
           </PrizeTwo>
@@ -194,7 +220,7 @@ export default function Prizes() {
         <Helper>
           <Image src={SVG} alt="domain-name" />
         </Helper>
-        <Helper>
+        <Helper pt={"3vh"}>
           <Image src={SVG} alt="domain-name" />
           <Image src={SVG} alt="domain-name" />
         </Helper>
