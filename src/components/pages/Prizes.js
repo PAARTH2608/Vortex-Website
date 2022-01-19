@@ -57,6 +57,7 @@ const Helper = styled.div`
   align-items: center;
   justify-content: space-between;
   z-index:1500;
+  position: relative;
 
   @media only screen and (max-width: 1050px){
     flex-direction: column;
@@ -175,6 +176,12 @@ const Img = styled.img`
     height: ${props => props.xxs}
   }
 `;
+const Text = styled.h1`
+  color: white;
+  position: absolute;
+  font-size:1.2rem;
+  left:${props => props.left}
+`;
 export default function Prizes() {
   return (
     <Container>
@@ -218,10 +225,13 @@ export default function Prizes() {
         <Img src={Rect2} alt="rect2" top={"80%"} left={"5%"} height={"4vh"} />
         <Helper>
           <Image src={SVG} alt="domain-name" />
+          {/* <Text left={"42%"}>DOMAIN PRIZE</Text> */}
         </Helper>
         <Helper pt={"3vh"}>
           <Image src={SVG} alt="domain-name" />
+          {/* <Text left={"17%"}>DOMAIN PRIZE</Text> */}
           <Image src={SVG} alt="domain-name" />
+          {/* <Text left={"67%"}>DOMAIN PRIZE</Text> */}
         </Helper>
       </ContainerTwo>
     </Container>
