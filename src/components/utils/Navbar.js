@@ -36,7 +36,7 @@ function Navbar() {
   const helperThree = () => window.scrollTo({ top: 1500, behavior: "smooth" });
   const helperFour = () => window.scrollTo({ top: 2200, behavior: "smooth" });
   const helperFive = () => window.scrollTo({ top: 2900, behavior: "smooth" });
-  const helperSix = () => window.scrollTo({ top: 5100, behavior: "smooth" });
+  const helperSix = () => window.scrollTo({ top: 5350, behavior: "smooth" });
   const helperSeven = () => window.scrollTo({ top: 7100, behavior: "smooth" });
   const helperEight = () => window.scrollTo({ top: 7900, behavior: "smooth" });
 
