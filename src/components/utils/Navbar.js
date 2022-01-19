@@ -25,8 +25,6 @@ function Navbar() {
 
   const handleClick = () => setClick(!click);
 
-  // const myRef = useRef(null)
-
   const closeMobileMenu = () => {
     setClick(false);
     

@@ -38,6 +38,10 @@ const ContOne = styled.div`
   @media only screen and (max-width: 800px) {
     width: 68.5%;
   }
+  @media only screen and (max-width: 750px) {
+    width: 81%;
+    height: 49%;
+  }
 `;
 const rotate = keyframes`
 0%{
@@ -58,7 +62,9 @@ const Inner = styled.div`
   transform: rotate(135deg);
   animation: ${rotate} 1.3s steps(2) 0.2s infinite;
   -webkit-animation: ${rotate} 2.3s linear infinite;
-  @media only screen and (max-width: 940px) {
+
+  @media only screen and (max-width: 700px) {
+    height:100%;
   }
 `;
 
