@@ -10,7 +10,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
 
   @media only screen and (max-width: 940px){
     height:200vh
@@ -45,7 +45,6 @@ const ContainerTwo = styled.div`
   position: relative;
 
   @media only screen and (max-width: 1050px){
-    
     justify-content: flex-start;
   }
 
