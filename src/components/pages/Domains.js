@@ -9,6 +9,7 @@ import OpenInnovation from "../../assets/Molecules/open_innovation.svg";
 import Rect1 from "../../assets/PageSVGs/Domain/Rect1.svg";
 import Rect2 from "../../assets/PageSVGs/Domain/Rect2.svg";
 import CAD from "../../assets/PageSVGs/Domain/CAD.svg";
+import { useLayoutEffect, useState } from "react";
 
 const Container = styled.div`
   height: 100vh;
@@ -18,6 +19,10 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   position: relative;
+
+  @media (max-width: 768px) {
+    height: fit-content;
+  }
 `;
 const Heading = styled.h1`
   height: 10vh;
@@ -35,35 +40,41 @@ const MoleculeContainer = styled.div`
   padding: 0;
   margin: 0;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  @media only screen and (max-width: 1050px){
+    flex-direction: column;
+  }
 `;
 const Img = styled.img`
   height: ${(props) => props.size};
-  position: absolute;
   top: ${(props) => props.top};
   left: ${(props) => props.left};
-  position: absolute;
-  display: block;
-  animation: animate 3s ease-in-out infinite;
+  // position: absolute;
+  display: flex;
+  // animation: animate 3s ease-in-out infinite;
 
-  @keyframes animate {
-    0% {
-      transform: translateY(70px);
-    }
+  // @keyframes animate {
+  //   0% {
+  //     transform: translateY(70px);
+  //   }
 
-    50% {
-      transform: translateY(10px);
-      width: -160px;
-      height: +160px;
-    }
+  //   50% {
+  //     transform: translateY(50px);
+  //     width: -160px;
+  //     height: +160px;
+  //   }
 
-    100% {
-      transform: translateY(70px);
-    }
-  }
-  @media only screen and (max-width: 1300px){
+  //   100% {
+  //     transform: translateY(70px);
+  //   }
+  // }
+  @media screen and (max-width: 1300px){
     height: ${props => props.med};
   }
-  @media only screen and (max-width: 1100px){
+  @media screen and (max-width: 1100px){
     top: ${(props) => props.sTop};
     left: ${(props) => props.sLeft};
     height: ${(props) => props.sSize};
@@ -77,19 +88,19 @@ const Image = styled.img`
   right: ${(props) => props.right};
 `;
 export default function Domains() {
-  // const [isMobile, setIsMobile] = useState(false);
-  // useLayoutEffect(() => {
-  //   function updateSize() {
-  //     if (window.innerWidth < 1100) {
-  //       setIsMobile(true);
-  //     } else {
-  //       setIsMobile(false);
-  //     }
-  //   }
-  //   window.addEventListener("resize", updateSize);
-  //   updateSize();
-  //   return () => window.removeEventListener("resize", updateSize);
-  // }, []);
+  const [isMobile, setIsMobile] = useState(false);
+  useLayoutEffect(() => {
+    function updateSize() {
+      if (window.innerWidth < 1100) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
 
 
   return (
@@ -103,56 +114,56 @@ export default function Domains() {
           src={Defence}
           alt="def"
           size={"150px"}
-          top={"50px"}
-          left={"40px"}
-          sTop={"0px"}
-          sLeft={"0px"}
+          // top={"50px"}
+          // left={"40px"}
+          // sTop={"0px"}
+          // sLeft={"0px"}
         />
         <Img
           src={HealthCare}
           alt="hltc"
           size={"200px"}
-          top={"170px"}
-          left={"240px"}
-          sTop={"120px"}
-          sLeft={"190px"}
+          // top={"170px"}
+          // left={"240px"}
+          // sTop={"120px"}
+          // sLeft={"190px"}
         />
         <Img
           src={Space}
           alt="space"
           size={"100px"}
-          top={"20px"}
-          left={"430px"}
-          sTop={"0px"}
-          sLeft={"380px"}
+          // top={"20px"}
+          // left={"430px"}
+          // sTop={"0px"}
+          // sLeft={"380px"}
         />
         <Img
           src={CommunityHelp}
           alt="commhelp"
           size={"170px"}
-          top={"30px"}
-          left={"640px"}
-          sTop={"10px"}
-          sLeft={"590px"}
+          // top={"30px"}
+          // left={"640px"}
+          // sTop={"10px"}
+          // sLeft={"590px"}
         />
         <Img
           src={Agriculture}
           alt="agrc"
           size={"130px"}
-          top={"180px"}
-          left={"890px"}
-          sTop={"130px"}
-          sLeft={"840px"}
+          // top={"180px"}
+          // left={"890px"}
+          // sTop={"130px"}
+          // sLeft={"840px"}
         />
         <Img
           src={OpenInnovation}
           alt="openinn"
           size={"200px"}
-          top={"5px"}
-          left={"1040px"}
-          sTop={"0px"}
-          sLeft={"590px"}
-          med={"150px"}
+          // top={"5px"}
+          // left={"1040px"}
+          // sTop={"0px"}
+          // sLeft={"590px"}
+          // med={"150px"}
         />
       </MoleculeContainer>
     </Container>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { GrClose } from "react-icons/gr";
+import { AiOutlineClose } from "react-icons/ai";
 
 const NotificationContainer = styled.div`
   height: 40vh;
@@ -19,7 +19,11 @@ const NotificationContainer = styled.div`
   );
 
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  border: 3px solid linear-gradient(
+    94deg,
+    rgba(41, 25, 249, 0.95) 100%,
+    rgba(217, 21, 250, 0.95) 38%
+  );
 
   display: flex;
   flex-direction: column;
@@ -27,14 +31,41 @@ const NotificationContainer = styled.div`
   justify-content: space-evenly;
   padding: 2rem;
   text-align: center;
+
+  @media (max-width: 920px) {
+    width: 60%;
+    height: 40%;
+    top: 20%;
+    left: 20%;
+  }
+  @media (max-width: 768px) {
+    width: 80%;
+    height: 40%;
+    top: 20%;
+    left: 10%;
+  }
 `;
 const Header = styled.h1`
   color: #fff;
+
+  @media (max-width: 920px) {
+    font-size: 2.3rem;
+  }
+  @media (max-width: 920px) {
+    font-size: 1.6rem;
+  }
 `;
 const Info = styled.p`
   color: #fff;
+  @media (max-width: 920px) {
+    font-size: 1.6rem;
+  }
+  @media (max-width: 920px) {
+    font-size: 1.2rem;
+  }
 `;
 const HighLight = styled.span`
+  font-style: montserrat;
   font-weight: bold;
   color: #fff;
 `;
@@ -44,10 +75,11 @@ const NotificationModal = props => {
     top: "5%",
     right: "5%",
     cursor: "pointer",
+    color: "#fff"
   };
   return (
     <NotificationContainer>
-      <GrClose style={style} color="#fff" onClick={props.onClick} />
+      <AiOutlineClose style={style} size={24} color="#fff" onClick={props.onClick} />
       <Header>UPCOMING EVENTS</Header>
       <Info>
         <HighLight>VORTEX 360 </HighLight>is a 30 days online CAD modelling hack

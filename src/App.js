@@ -12,17 +12,23 @@ import Sponsors from "./components/pages/Sponsors";
 import Footer from "./components/pages/Footer";
 import NotificationModal from "./components/utils/NotificationModal";
 import { useState } from "react";
+import TopBanner from "./components/utils/TopBanner";
+import styled from "styled-components";
 
+const MainContainer = styled.div`
+  background: #2A044F;
+`;
 function App() {
   const [show, setShow] = useState(true);
   const handleClose = () => setShow(false);
   return (
     <Router>
+      <MainContainer>{!show && <TopBanner />}</MainContainer>
       <Navbar />
       <Home />
       {show && <NotificationModal onClick={handleClose} />}
       <About />
-      {/* <Domains /> */}
+      <Domains />
       <Speakers />
       <Timeline />
       <Prizes />

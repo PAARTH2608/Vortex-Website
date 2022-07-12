@@ -209,14 +209,14 @@ export default function Prizes() {
         <InsideHelper>
           <PrizeOne>
             <Header top={"0"} xtop={"-120px"}>FIRST PRIZE</Header>
-            <Prize top={"60px"} xtop={"-40px"}>₹ 7000</Prize>
+            <Prize top={"60px"} xtop={"-40px"}>₹ 30000</Prize>
           </PrizeOne>
           <PrizeTwo>
             <Header top={"170px"} right={"0"} xtop={"70px"}>
               SECOND PRIZE
             </Header>
             <Prize top={"230px"} right={"0"} xtop={"150px"}>
-              ₹ 7000
+              ₹ 20000
             </Prize>
           </PrizeTwo>
         </InsideHelper>

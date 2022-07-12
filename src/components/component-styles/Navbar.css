@@ -6,7 +6,7 @@
   font-size: 1.2rem;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 19999;
   background: rgb(64,61,61);
   background: linear-gradient(180deg, rgb(53, 51, 51) -20%, rgb(42, 4, 79) 100%);
 }
